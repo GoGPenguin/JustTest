@@ -14,7 +14,6 @@ function getTotalPrice1(array) {
 //      reduce(...): thực thi một hàm lên các phần tử của mảng (từ trái sang phải) với một biến tích lũy để thu về một giá trị duy nhất.
 //      cú pháp: arr.reduce((biến tích lũy, phần tử đang xử lí) => {do sth...}, giá trị cho biến tích lũy)
 let getTotalPrice2 = (array) => {
-
     return array.reduce((sum, array) => {return sum + array.quantity * array.price}, 0);
 }
 
