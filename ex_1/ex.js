@@ -176,5 +176,61 @@ console.log(test2);
 // end ex_9
 
 //ex_10
+     function smallWords(string,num){
+      return string.split(" ").reduce((newString,word)=>{
+        if( word.length<=num)
+         return newString+" "+word; 
+        return newString;
+      },"" );
      
+     };
+     console.log(smallWords("I love Foood Code Too Playing Much",4));
 //end  ex_10
+
+//ex_11
+const students=[
+   {hoten:"Le A",gioitinh: "Nam"},
+   {hoten:"Le B",gioitinh: "Nam"},
+   {hoten:"Le c",gioitinh: "Nam"},
+   {hoten:"Le D",gioitinh: "Nam"},
+   {hoten:"Le E",gioitinh: "Nu"},
+   {hoten:"Le F",gioitinh: "Nu"},
+   {hoten:"Le I",gioitinh: "Nu"},
+   {hoten:"Le H",gioitinh: "Nu"} , 
+]
+
+let sex={
+   "nam":[],
+   "nu":[]
+}
+for (let key of students){
+   if (key.gioitinh=="Nam")
+      sex.nam.push(key.hoten);
+   else sex.nu.push(key.hoten);
+}
+console.log(sex);
+//end ex_11
+
+//ex_12
+const stuDents=[
+   {hoTen: "Le van a", lop: "A", diem:7.5},
+   {hoTen: "Le van b", lop: "A", diem:7.5},
+   {hoTen: "Le van c", lop: "B", diem:8.5},
+   {hoTen: "Le van d", lop: "C", diem:5.5},
+   {hoTen: "Le van e", lop: "C", diem:6.5},
+   {hoTen: "Le van f", lop: "B", diem:1.5},
+   {hoTen: "Le van g", lop: "A", diem:4.5},
+   {hoTen: "Le van h", lop: "B", diem:9.5},
+]
+
+let trungBinh={
+   A: 0 , B: 0 , C: 0
+}
+
+for(let key of stuDents){
+   if(key.lop=="A")trungBinh.A+=key.diem;
+   if(key.lop=="B")trungBinh.B+=key.diem;
+   if(key.lop=="C")trungBinh.C+=key.diem;
+}
+console.log(trungBinh);
+//end ex_12
